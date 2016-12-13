@@ -15,8 +15,6 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LogUtil.i(TAG, "onCreate");
-        initVariables(savedInstanceState);
-        initView(savedInstanceState);
     }
 
     @Override

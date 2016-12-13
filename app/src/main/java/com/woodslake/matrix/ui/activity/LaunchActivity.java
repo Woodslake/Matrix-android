@@ -23,6 +23,9 @@ public class LaunchActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+        setContentView(R.layout.activity_launch);
+        initVariables(savedInstanceState);
+        initView(savedInstanceState);
     }
 
     @Override
@@ -32,7 +35,6 @@ public class LaunchActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_launch);
         iv_launch = (ImageView) findViewById(R.id.iv_launch);
         String url = mLaunchEngine.getLaunchImg();
         Glide.with(this)

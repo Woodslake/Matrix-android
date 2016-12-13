@@ -11,7 +11,7 @@ public class NativeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_native);
 
     // Example of a call to a native method
     TextView tv = (TextView) findViewById(R.id.sample_text);
