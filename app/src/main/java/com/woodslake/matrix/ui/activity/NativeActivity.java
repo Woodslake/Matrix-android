@@ -1,10 +1,12 @@
-package com.woodslake.matrix;
+package com.woodslake.matrix.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.woodslake.matrix.R;
+
+public class NativeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

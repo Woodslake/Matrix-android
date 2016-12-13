@@ -3,7 +3,7 @@
 
 extern "C"
 jstring
-Java_com_woodslake_matrix_MainActivity_stringFromJNI(
+Java_com_woodslake_matrix_ui_activity_NativeActivity_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
     std::string hello = "Hello from C++";
