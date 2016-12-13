@@ -1,6 +1,9 @@
 package com.woodslake.matrix.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,9 +39,30 @@ public class LaunchActivity extends BaseActivity {
     protected void initView(Bundle savedInstanceState) {
         iv_launch = (ImageView) findViewById(R.id.iv_launch);
         String url = mLaunchEngine.getLaunchImg();
+
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.launch);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(LaunchActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
         Glide.with(this)
                 .load(url)
-                .crossFade()
+                .animate(animation)
                 .into(iv_launch);
     }
 }

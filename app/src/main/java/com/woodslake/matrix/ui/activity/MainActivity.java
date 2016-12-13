@@ -1,12 +1,13 @@
 package com.woodslake.matrix.ui.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 
 import com.woodslake.matrix.R;
 import com.woodslake.matrix.base.ui.BaseActivity;
 
 public class MainActivity extends BaseActivity {
+    private RecyclerView rv_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
+        rv_list = (RecyclerView) findViewById(R.id.rv_list);
 
     }
 }
