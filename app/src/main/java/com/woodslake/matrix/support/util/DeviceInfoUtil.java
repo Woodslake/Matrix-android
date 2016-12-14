@@ -9,22 +9,6 @@ import android.os.Build;
 public class DeviceInfoUtil {
 
     /**
-     * Android OS版本号
-     * @return
-     */
-    public static String getDeviceOsVersion(){
-        return Build.VERSION.RELEASE;
-    }
-
-    /**
-     * Android sdk版本号
-     * @return
-     */
-    public static int getDeviceSdkVersion(){
-        return Build.VERSION.SDK_INT;
-    }
-
-    /**
      * 手机制造商
      * @return
      */
@@ -38,6 +22,22 @@ public class DeviceInfoUtil {
      */
     public static String getDeviceModel(){
         return Build.MODEL;
+    }
+
+    /**
+     * Android OS版本号
+     * @return
+     */
+    public static String getAndroidOs(){
+        return Build.VERSION.RELEASE;
+    }
+
+    /**
+     * Android sdk版本号
+     * @return
+     */
+    public static int getAndroidSdk(){
+        return Build.VERSION.SDK_INT;
     }
 
 }

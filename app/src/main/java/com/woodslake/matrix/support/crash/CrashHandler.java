@@ -6,6 +6,9 @@ import com.woodslake.matrix.support.util.AppInfoUtil;
 import com.woodslake.matrix.support.util.DeviceInfoUtil;
 import com.woodslake.matrix.support.util.LogUtil;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Woodslake on 2016/12/14.
  */
@@ -17,6 +20,16 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     private Thread.UncaughtExceptionHandler mDefaultHandler;
     //CrashHandler实例
     private static final CrashHandler INSTANCE = new CrashHandler();
+    //crash数据
+    private final Map mCrashMap = new HashMap();
+    private final String deviceVendor = "deviceVendor";
+    private final String deviceModel = "deviceModel";
+    private final String androidOs = "androidOs";
+    private final String androidSdk = "androidSdk";
+    private final String packageName = "packageName";
+    private final String versionName = "versionName";
+    private final String versionCode = "versionCode";
+
 
     private CrashHandler(){}
 
@@ -45,24 +58,33 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         if(throwable == null){
             return false;
         }
-        collectDeviceInfo(mContext);
+        collectDeviceInfo();
         collectAppInfo(mContext);
         saveCrashInfoFile(throwable);
+        LogUtil.i(TAG, mCrashMap.toString());
         return true;
     }
 
-    private void collectDeviceInfo(Context context){
-        String os = DeviceInfoUtil.getDeviceOsVersion();
-        int sdk = DeviceInfoUtil.getDeviceSdkVersion();
-        String vendor = DeviceInfoUtil.getDeviceVendor();
-        String model = DeviceInfoUtil.getDeviceModel();
-        LogUtil.i(TAG, String.format("%s,%s,%s,%d", vendor, model, os, sdk));
+    private void collectDeviceInfo(){
+        String deviceVendor = DeviceInfoUtil.getDeviceVendor();
+        String deviceModel = DeviceInfoUtil.getDeviceModel();
+        String androidOs = DeviceInfoUtil.getAndroidOs();
+        int androidSdk = DeviceInfoUtil.getAndroidSdk();
+        mCrashMap.put(this.deviceVendor, deviceVendor);
+        mCrashMap.put(this.deviceModel, deviceModel);
+        mCrashMap.put(this.androidOs, androidOs);
+        mCrashMap.put(this.androidSdk, androidSdk);
+//        LogUtil.i(TAG, String.format("%s,%s,%s,%d", deviceVendor, deviceModel, androidOs, androidSdk));
     }
 
     private void collectAppInfo(Context context){
+        String packageName = AppInfoUtil.getPackageName(context);
         String versionName = AppInfoUtil.getVersionName(context);
         int versionCode = AppInfoUtil.getVersionCode(context);
-        LogUtil.i(TAG, String.format("%s,%d", versionName, versionCode));
+        mCrashMap.put(this.packageName, packageName);
+        mCrashMap.put(this.versionName, versionName);
+        mCrashMap.put(this.versionCode, versionCode);
+//        LogUtil.i(TAG, String.format("%s,%s,%d", packageName, versionName, versionCode));
     }
 
     private String saveCrashInfoFile(Throwable throwable){

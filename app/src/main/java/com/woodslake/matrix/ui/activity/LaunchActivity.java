@@ -30,7 +30,6 @@ public class LaunchActivity extends BaseActivity {
 
     @Override
     protected void initVariables(Bundle savedInstanceState) {
-        LogUtil.i(TAG, "initVariables");
         mLaunchEngine = LaunchEngine.createInstance();
     }
 

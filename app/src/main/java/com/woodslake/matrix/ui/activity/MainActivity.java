@@ -28,4 +28,5 @@ public class MainActivity extends BaseActivity {
     protected void initView(Bundle savedInstanceState) {
         rv_list = (RecyclerView) findViewById(R.id.rv_list);
     }
+
 }
