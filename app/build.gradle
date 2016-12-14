@@ -36,9 +36,8 @@ android {
 
     //分渠道打包
     productFlavors {
-        woods_1{}
-        woods_2{}
-        woods_3{}
+        google{}
+        facebook{}
         productFlavors.all {
             flavors -> flavors.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
         }
