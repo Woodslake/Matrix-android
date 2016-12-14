@@ -1,4 +1,4 @@
-package com.woodslake.matrix.util;
+package com.woodslake.matrix.support.util;
 
 import android.util.Log;
 

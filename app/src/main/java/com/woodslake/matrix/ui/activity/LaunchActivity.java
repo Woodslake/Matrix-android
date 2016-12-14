@@ -8,9 +8,9 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.woodslake.matrix.R;
-import com.woodslake.matrix.support.ui.BaseActivity;
+import com.woodslake.matrix.support.base.BaseActivity;
 import com.woodslake.matrix.engine.LaunchEngine;
-import com.woodslake.matrix.util.LogUtil;
+import com.woodslake.matrix.support.util.LogUtil;
 
 /**
  * Created by Woodslake on 2016/12/13.

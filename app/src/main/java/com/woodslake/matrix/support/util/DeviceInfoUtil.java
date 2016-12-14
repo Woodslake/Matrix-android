@@ -1,4 +1,4 @@
-package com.woodslake.matrix.util;
+package com.woodslake.matrix.support.util;
 
 /**
  * Created by Woodslake on 2016/12/14.

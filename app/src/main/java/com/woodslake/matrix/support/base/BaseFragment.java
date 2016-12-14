@@ -1,4 +1,4 @@
-package com.woodslake.matrix.support.ui;
+package com.woodslake.matrix.support.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.woodslake.matrix.util.LogUtil;
+import com.woodslake.matrix.support.util.LogUtil;
 
 /**
  * Created by Woodslake on 2016/12/13.

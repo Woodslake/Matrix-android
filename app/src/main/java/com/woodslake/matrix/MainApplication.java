@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.woodslake.matrix.support.analytics.AnalyticsManager;
 import com.woodslake.matrix.support.crash.CrashHandler;
-import com.woodslake.matrix.util.LogUtil;
+import com.woodslake.matrix.support.util.LogUtil;
 
 /**
  * Created by Woodslake on 2016/12/13.

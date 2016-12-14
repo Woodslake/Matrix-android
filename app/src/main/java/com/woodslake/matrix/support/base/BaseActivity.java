@@ -1,10 +1,10 @@
-package com.woodslake.matrix.support.ui;
+package com.woodslake.matrix.support.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.woodslake.matrix.support.analytics.AnalyticsManager;
-import com.woodslake.matrix.util.LogUtil;
+import com.woodslake.matrix.support.util.LogUtil;
 
 /**
  * Created by Woodslake on 2016/12/13.

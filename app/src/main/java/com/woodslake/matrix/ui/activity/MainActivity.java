@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
 import com.woodslake.matrix.R;
-import com.woodslake.matrix.support.ui.BaseActivity;
+import com.woodslake.matrix.support.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
     private RecyclerView rv_list;
