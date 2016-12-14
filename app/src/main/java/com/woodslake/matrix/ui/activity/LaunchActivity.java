@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.woodslake.matrix.R;
-import com.woodslake.matrix.base.ui.BaseActivity;
+import com.woodslake.matrix.support.ui.BaseActivity;
 import com.woodslake.matrix.engine.LaunchEngine;
 import com.woodslake.matrix.util.LogUtil;
 

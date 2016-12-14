@@ -1,4 +1,4 @@
-package com.woodslake.matrix.base.ui;
+package com.woodslake.matrix.support.ui;
 
 import android.content.Context;
 import android.os.Bundle;

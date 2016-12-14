@@ -2,6 +2,7 @@ package com.woodslake.matrix;
 
 import android.app.Application;
 
+import com.woodslake.matrix.support.analytics.AnalyticsManager;
 import com.woodslake.matrix.util.LogUtil;
 
 /**
@@ -15,6 +16,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         LogUtil.i(TAG, "onCreate");
+        AnalyticsManager.init(this);
     }
 
     @Override

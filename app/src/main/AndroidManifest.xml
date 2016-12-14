@@ -28,16 +28,21 @@
         </activity>
         <activity android:name=".ui.activity.MainActivity"></activity>
         <activity android:name=".ui.activity.NativeActivity"></activity>
+
+        <!-- Glide use okhttp -->
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />
+
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="584fbf35f43e481e66000346"/>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="woods" />
+
     </application>
-
-    <!-- Glide use okhttp -->
-    <meta-data
-        android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-        android:value="GlideModule" />
-
-    <!-- 友盟统计 -->
-    <meta-data android:name="UMENG_APPKEY" android:value="584fbf35f43e481e66000346"/>
-    <meta-data android:name="UMENG_CHANNEL" android:value="woods" />
-
 
 </manifest>

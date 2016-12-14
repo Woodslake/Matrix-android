@@ -1,8 +1,9 @@
-package com.woodslake.matrix.base.ui;
+package com.woodslake.matrix.support.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.woodslake.matrix.support.analytics.AnalyticsManager;
 import com.woodslake.matrix.util.LogUtil;
 
 /**
@@ -33,12 +34,14 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onResume() {
         super.onResume();
         LogUtil.i(TAG, "onResume");
+        AnalyticsManager.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         LogUtil.i(TAG, "onPause");
+        AnalyticsManager.onPause(this);
     }
 
     @Override
