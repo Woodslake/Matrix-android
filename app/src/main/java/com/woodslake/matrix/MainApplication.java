@@ -3,6 +3,7 @@ package com.woodslake.matrix;
 import android.app.Application;
 
 import com.woodslake.matrix.support.analytics.AnalyticsManager;
+import com.woodslake.matrix.support.crash.CrashHandler;
 import com.woodslake.matrix.util.LogUtil;
 
 /**
@@ -16,6 +17,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         LogUtil.i(TAG, "onCreate");
+        CrashHandler.getInstance().init(this);
         AnalyticsManager.init(this);
     }
 
