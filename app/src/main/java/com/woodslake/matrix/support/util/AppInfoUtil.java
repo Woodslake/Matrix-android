@@ -2,6 +2,7 @@ package com.woodslake.matrix.support.util;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 /**
@@ -9,6 +10,36 @@ import android.content.pm.PackageManager;
  */
 
 public class AppInfoUtil {
+
+    public static String getPackageName(Context context){
+        return context.getPackageName();
+    }
+
+    public static String getVersionName(Context context){
+        String versionName = null;
+        try {
+            PackageManager packageManager = context.getPackageManager();
+            String packageName = context.getPackageName();
+            PackageInfo packageInfo = packageManager.getPackageInfo(packageName, 0);
+            versionName = packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return versionName;
+    }
+
+    public static int getVersionCode(Context context){
+        int versionCode = 0;
+        try {
+            PackageManager packageManager = context.getPackageManager();
+            String packageName = context.getPackageName();
+            PackageInfo packageInfo = packageManager.getPackageInfo(packageName, 0);
+            versionCode = packageInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return versionCode;
+    }
 
     public static String getApplicationMetaData(Context context, String name){
         if(context == null || TextUtil.isEmpty(name)){

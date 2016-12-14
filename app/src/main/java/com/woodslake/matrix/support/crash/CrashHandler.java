@@ -2,11 +2,16 @@ package com.woodslake.matrix.support.crash;
 
 import android.content.Context;
 
+import com.woodslake.matrix.support.util.AppInfoUtil;
+import com.woodslake.matrix.support.util.DeviceInfoUtil;
+import com.woodslake.matrix.support.util.LogUtil;
+
 /**
  * Created by Woodslake on 2016/12/14.
  */
 
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
+    private final String TAG = CrashHandler.class.getSimpleName();
     private Context mContext;
     //系统默认的UncaughtException处理类
     private Thread.UncaughtExceptionHandler mDefaultHandler;
@@ -40,18 +45,24 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         if(throwable == null){
             return false;
         }
-        collectAppInfo(mContext);
         collectDeviceInfo(mContext);
+        collectAppInfo(mContext);
         saveCrashInfoFile(throwable);
         return true;
     }
 
-    private void collectAppInfo(Context context){
-
+    private void collectDeviceInfo(Context context){
+        String os = DeviceInfoUtil.getDeviceOsVersion();
+        int sdk = DeviceInfoUtil.getDeviceSdkVersion();
+        String vendor = DeviceInfoUtil.getDeviceVendor();
+        String model = DeviceInfoUtil.getDeviceModel();
+        LogUtil.i(TAG, String.format("%s,%s,%s,%d", vendor, model, os, sdk));
     }
 
-    private void collectDeviceInfo(Context context){
-
+    private void collectAppInfo(Context context){
+        String versionName = AppInfoUtil.getVersionName(context);
+        int versionCode = AppInfoUtil.getVersionCode(context);
+        LogUtil.i(TAG, String.format("%s,%d", versionName, versionCode));
     }
 
     private String saveCrashInfoFile(Throwable throwable){
