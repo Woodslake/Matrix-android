@@ -1,12 +1,5 @@
 apply plugin: 'com.android.application'
 
-// 默认正式包后缀名
-ext.appReleaseSuffixName = "_release.apk"
-// 默认debug包后缀名
-ext.appDebugSuffixName = "_debug.apk"
-// 默认的名称
-ext.appName = "Woods-android"
-
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
@@ -17,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
 //        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // dex突破65535的限制
+        multiDexEnabled true
+
         externalNativeBuild {
             cmake {
                 cppFlags ""
