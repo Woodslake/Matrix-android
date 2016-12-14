@@ -1,5 +1,12 @@
 apply plugin: 'com.android.application'
 
+// 默认正式包后缀名
+ext.appReleaseSuffixName = "_release.apk"
+// 默认debug包后缀名
+ext.appDebugSuffixName = "_debug.apk"
+// 默认的名称
+ext.appName = "Woods-android"
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
@@ -27,7 +34,19 @@ android {
             path "CMakeLists.txt"
         }
     }
+
     sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
+
+    //分渠道打包
+    productFlavors {
+        woods_1{}
+        woods_2{}
+        woods_3{}
+        productFlavors.all {
+            flavors -> flavors.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+
 }
 
 dependencies {
