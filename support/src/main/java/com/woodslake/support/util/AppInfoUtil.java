@@ -1,4 +1,4 @@
-package com.woodslake.matrix.support.util;
+package com.woodslake.support.util;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;

@@ -1,9 +1,9 @@
-package com.woodslake.matrix.support.analytics;
+package com.woodslake.support.analytics;
 
 import android.content.Context;
 
 import com.umeng.analytics.MobclickAgent;
-import com.woodslake.matrix.support.util.AppInfoUtil;
+import com.woodslake.support.util.AppInfoUtil;
 
 /**
  * Created by Woodslake on 2016/12/14.

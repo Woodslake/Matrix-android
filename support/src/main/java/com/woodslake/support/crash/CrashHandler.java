@@ -1,10 +1,10 @@
-package com.woodslake.matrix.support.crash;
+package com.woodslake.support.crash;
 
 import android.content.Context;
+import android.util.Log;
 
-import com.woodslake.matrix.support.util.AppInfoUtil;
-import com.woodslake.matrix.support.util.DeviceInfoUtil;
-import com.woodslake.matrix.support.util.LogUtil;
+import com.woodslake.support.util.AppInfoUtil;
+import com.woodslake.support.util.DeviceInfoUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -61,7 +61,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         collectDeviceInfo();
         collectAppInfo(mContext);
         saveCrashInfoFile(throwable);
-        LogUtil.i(TAG, mCrashMap.toString());
+        Log.i(TAG, mCrashMap.toString());
         return true;
     }
 
@@ -74,7 +74,6 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         mCrashMap.put(this.deviceModel, deviceModel);
         mCrashMap.put(this.androidOs, androidOs);
         mCrashMap.put(this.androidSdk, androidSdk);
-//        LogUtil.i(TAG, String.format("%s,%s,%s,%d", deviceVendor, deviceModel, androidOs, androidSdk));
     }
 
     private void collectAppInfo(Context context){
@@ -84,7 +83,6 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         mCrashMap.put(this.packageName, packageName);
         mCrashMap.put(this.versionName, versionName);
         mCrashMap.put(this.versionCode, versionCode);
-//        LogUtil.i(TAG, String.format("%s,%s,%d", packageName, versionName, versionCode));
     }
 
     private String saveCrashInfoFile(Throwable throwable){
