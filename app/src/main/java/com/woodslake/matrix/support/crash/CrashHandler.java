@@ -1,10 +1,10 @@
-package com.woodslake.basic.crash;
+package com.woodslake.matrix.support.crash;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.woodslake.support.util.AppInfoUtil;
-import com.woodslake.support.util.DeviceInfoUtil;
+import com.woodslake.basic.util.AppInfoUtil;
+import com.woodslake.basic.util.DeviceInfoUtil;
 
 import java.util.HashMap;
 import java.util.Map;

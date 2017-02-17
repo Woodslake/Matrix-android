@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.woodslake.support.analytics.AnalyticsManager;
-
 /**
  * Created by Woodslake on 2016/12/13.
  */
@@ -34,14 +32,12 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume");
-        AnalyticsManager.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "onPause");
-        AnalyticsManager.onPause(this);
     }
 
     @Override

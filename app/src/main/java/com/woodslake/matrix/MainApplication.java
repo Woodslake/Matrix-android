@@ -3,8 +3,8 @@ package com.woodslake.matrix;
 import android.app.Application;
 import android.util.Log;
 
-import com.woodslake.basic.analytics.AnalyticsManager;
-import com.woodslake.basic.crash.CrashHandler;
+import com.woodslake.matrix.support.analytics.AnalyticsManager;
+import com.woodslake.matrix.support.crash.CrashHandler;
 
 /**
  * Created by Woodslake on 2016/12/13.

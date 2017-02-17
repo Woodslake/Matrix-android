@@ -47,4 +47,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':basic')
+    //友盟统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }
