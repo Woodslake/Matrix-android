@@ -1,4 +1,4 @@
-package com.woodslake.support.analytics;
+package com.woodslake.basic.analytics;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.woodslake.support.crash;
+package com.woodslake.basic.crash;
 
 import android.content.Context;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package com.woodslake.support.util;
+package com.woodslake.basic.util;
 
 import android.os.Build;
 

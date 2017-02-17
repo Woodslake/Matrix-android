@@ -1,4 +1,4 @@
-package com.woodslake.support.util;
+package com.woodslake.basic.util;
 
 /**
  * Created by Woodslake on 2016/12/14.

@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Support</string>
-
-    <!-- analytics -->
-    <string name="AppKey">UMENG_APPKEY</string>
-    <string name="ChannelId">UMENG_CHANNEL</string>
-</resources>

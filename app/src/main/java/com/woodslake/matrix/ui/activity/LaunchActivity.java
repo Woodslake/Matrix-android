@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.woodslake.matrix.R;
 import com.woodslake.matrix.engine.LaunchEngine;
-import com.woodslake.support.base.BaseActivity;
+import com.woodslake.basic.base.BaseActivity;
 
 /**
  * Created by Woodslake on 2016/12/13.
