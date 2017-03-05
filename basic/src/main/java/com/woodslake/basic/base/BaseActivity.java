@@ -1,8 +1,11 @@
 package com.woodslake.basic.base;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * Created by Woodslake on 2016/12/13.
@@ -10,6 +13,7 @@ import android.util.Log;
 
 public abstract class BaseActivity extends AppCompatActivity{
     protected final String TAG = getClass().getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,5 +65,13 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected abstract void initVariables(Bundle savedInstanceState);
 
     protected abstract void initView(Bundle savedInstanceState);
+
+    public final View getRootView(){
+        return ((ViewGroup)findViewById(android.R.id.content)).getChildAt(0);
+    }
+
+    protected final void toast(String msg){
+        Snackbar.make(getRootView(), msg, Snackbar.LENGTH_SHORT).show();
+    }
 
 }

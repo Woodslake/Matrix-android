@@ -2,6 +2,7 @@ package com.woodslake.basic.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -91,6 +92,10 @@ public class BaseFragment extends Fragment {
     public void onLowMemory() {
         super.onLowMemory();
         Log.i(TAG, "onLowMemory");
+    }
+
+    protected final void toast(String msg){
+        Snackbar.make(getView(), msg, Snackbar.LENGTH_SHORT).show();
     }
 
 }
