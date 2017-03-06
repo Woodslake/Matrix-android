@@ -1,4 +1,4 @@
-package com.woodslake.basic.util;
+package com.woodslake.library.util;
 
 /**
  * Created by Woodslake on 2016/12/14.

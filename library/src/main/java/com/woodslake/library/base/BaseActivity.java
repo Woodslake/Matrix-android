@@ -1,4 +1,4 @@
-package com.woodslake.basic.base;
+package com.woodslake.library.base;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;

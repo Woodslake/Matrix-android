@@ -3,8 +3,8 @@ package com.woodslake.matrix.support.crash;
 import android.content.Context;
 import android.util.Log;
 
-import com.woodslake.basic.util.AppInfoUtil;
-import com.woodslake.basic.util.DeviceInfoUtil;
+import com.woodslake.library.util.AppInfoUtil;
+import com.woodslake.library.util.DeviceInfoUtil;
 
 import java.util.HashMap;
 import java.util.Map;

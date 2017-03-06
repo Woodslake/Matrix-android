@@ -3,7 +3,7 @@ package com.woodslake.matrix.support.analytics;
 import android.content.Context;
 
 import com.umeng.analytics.MobclickAgent;
-import com.woodslake.basic.util.AppInfoUtil;
+import com.woodslake.library.util.AppInfoUtil;
 
 /**
  * Created by Woodslake on 2016/12/14.

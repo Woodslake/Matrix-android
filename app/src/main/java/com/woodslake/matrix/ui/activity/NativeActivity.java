@@ -3,7 +3,7 @@ package com.woodslake.matrix.ui.activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.woodslake.basic.base.BaseActivity;
+import com.woodslake.library.base.BaseActivity;
 import com.woodslake.matrix.R;
 
 public class NativeActivity extends BaseActivity {
