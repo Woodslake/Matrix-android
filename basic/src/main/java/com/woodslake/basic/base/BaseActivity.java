@@ -66,6 +66,8 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     protected abstract void initView(Bundle savedInstanceState);
 
+    protected abstract void loadData();
+
     public final View getRootView(){
         return ((ViewGroup)findViewById(android.R.id.content)).getChildAt(0);
     }

@@ -27,4 +27,9 @@ public class MainActivity extends BaseActivity {
         rv_list = (RecyclerView) findViewById(R.id.rv_list);
     }
 
+    @Override
+    protected void loadData() {
+
+    }
+
 }

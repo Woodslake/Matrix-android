@@ -62,4 +62,10 @@ public class LaunchActivity extends BaseActivity {
                 .animate(animation)
                 .into(iv_launch);
     }
+
+    @Override
+    protected void loadData() {
+
+    }
+
 }

@@ -13,7 +13,7 @@ import android.view.ViewGroup;
  * Created by Woodslake on 2016/12/13.
  */
 
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
     protected final String TAG = getClass().getSimpleName();
 
     @Override
@@ -93,6 +93,12 @@ public class BaseFragment extends Fragment {
         super.onLowMemory();
         Log.i(TAG, "onLowMemory");
     }
+
+    protected abstract void initVariables(Bundle savedInstanceState);
+
+    protected abstract void initView(Bundle savedInstanceState);
+
+    protected abstract void loadData();
 
     protected final void toast(String msg){
         Snackbar.make(getView(), msg, Snackbar.LENGTH_SHORT).show();
